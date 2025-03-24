@@ -1,9 +1,12 @@
 import './Example.css';
 
-function TabButton(props) {
+function TabButton({ children }) {
+  const handleClick = function () {
+    console.log(`clicked ${children}`);
+  };
   return (
     <li>
-      <button>{props.children}</button>
+      <button onClick={handleClick}>{children}</button>
     </li>
   );
 }
